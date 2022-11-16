@@ -1,13 +1,251 @@
+/* MAIN STYLES */
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  align-items: center;
+  background: rgb(11, 19, 28);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+div,
+h1,
+form,
+input,
+p {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
 }
+
+/* END MAIN STYLES */
+
+/* HEADER STYLES */
+header {
+  height: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.logout__btn {
+  position: absolute;
+  right: 2rem;
+  top: 1.25rem;
+}
+/* END HEADER STYLES */
+
+/* LOGIN STYLES */
+h2 {
+  text-align: center;
+}
+
+.login__container {
+  width: 440px;
+  height: 360px;
+  padding: 10px 0;
+  margin: auto;
+  border-radius: 5px;
+  background: white;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  margin: 1rem;
+}
+
+.input__styles {
+  width: 92%;
+  height: 36px;
+  border-radius: 0 5px 5px 0;
+  border: solid 1px rgb(62, 199, 244);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
+  background: #fff;
+  border-radius: 5.6px;
+  padding-left: 30px;
+}
+
+.login__btn {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: none;
+  background: #1c87c9;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+}
+button:hover {
+  background: #26a9e0;
+  cursor: pointer;
+}
+
+.disabled__gray {
+  background: gray !important;
+  cursor: auto !important;
+}
+
+.input__icon {
+  position: absolute;
+  left: 5px;
+  bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  cursor: pointer;
+}
+
+.input__container {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.password__eye__icon {
+  position: absolute;
+  right: 5px;
+  bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  cursor: pointer;
+}
+
+.error__validation {
+  color: red;
+  font-size: 0.75rem;
+}
+/* END LOGIN STYLES */
+
+/* TODO STYLES */
+.todoForm__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo__container {
+  width: 440px;
+  margin: auto;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.31);
+  background: white;
+}
+
+.todo__btn {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #1c87c9;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.todoForm__container {
+  position: relative;
+}
+
+.search__container {
+  position: relative;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search__input {
+  width: 50%;
+  padding-left: 30px;
+  bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.search__icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  position: absolute;
+  left: 5px;
+  bottom: 0.5rem;
+  line-height: 1.75rem;
+}
+
+.todo__input {
+  width: 50% !important;
+  padding-left: 30px;
+  left: 3px;
+  bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.new__btn {
+  background: #ee3fd7;
+}
+
+.save__btn {
+  background: green;
+}
+
+.cancel__btn {
+  background: red;
+}
+
+.todoList__container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todoItem__styles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(62, 199, 244);
+  height: 3rem;
+  margin: 1rem;
+  padding: 0 10px;
+  border-radius: 5.6px;
+  cursor: pointer;
+}
+
+.todoItem__icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.todoItem__icon.edit__icon {
+  color: orange;
+}
+
+.todoItem__icon.trash__icon {
+  color: red;
+}
+/* END TODO STYLES */
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 600px) {
+  .login__container,
+  .todo__container {
+    width: 360px;
+  }
+
+  header {
+    justify-content: space-between;
+    margin-left: 1rem;
+  }
+}
+
+/* END MEDIA QUERIES */
