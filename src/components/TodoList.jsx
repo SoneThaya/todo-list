@@ -1,12 +1,10 @@
 import React from "react";
 import TodoItem from "./TodoItem";
+import { useTodos } from "../context/TodoProvider";
 
-const TodoList = ({
-  searchedTodos,
-  handleEditTodo,
-  handleDeleteTodo,
-  handleComplete,
-}) => {
+const TodoList = ({ searchedTodos, handleEditTodo }) => {
+  const { handleDeleteTodo, handleComplete } = useTodos();
+
   return (
     <ul className="todoList__container">
       {searchedTodos.map((todo) => (

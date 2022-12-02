@@ -1,15 +1,18 @@
 import React from "react";
 import { FcTodoList } from "react-icons/fc";
+import { useTodos } from "../context/TodoProvider";
 
-const EditTodoForm = ({
-  todo,
-  handleEditForm,
-  editTodo,
-  handleEditInputChange,
-  setIsEditing,
-}) => {
+const EditTodoForm = ({ setIsEditing }) => {
+  const { todo, handleEditForm, editTodo, handleEditInputChange } = useTodos();
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    handleEditForm(todo);
+    setIsEditing(false);
+  };
+
   return (
-    <form onSubmit={handleEditForm}>
+    <form onSubmit={onSubmit}>
       <div className="todoForm__container">
         <input
           type="text"

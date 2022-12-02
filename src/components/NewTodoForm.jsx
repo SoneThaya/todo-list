@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { FcTodoList } from "react-icons/fc";
+import { useTodos } from "../context/TodoProvider";
 
-const NewTodoForm = ({ todo, handleToDoSubmit, setTodo, setIsAddNewTodo }) => {
+const NewTodoForm = ({ setIsAddNewTodo }) => {
+  const [todo, setTodo] = useState("");
+  const { handleToDoSubmit } = useTodos();
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    handleToDoSubmit(todo);
+    setIsAddNewTodo(false);
+  };
+
   return (
-    <form onSubmit={handleToDoSubmit}>
+    <form onSubmit={onSubmit}>
       <div className="todoForm__container">
         <input
           type="text"

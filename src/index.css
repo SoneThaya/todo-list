@@ -37,6 +37,15 @@ h1 {
   color: white;
 }
 
+.profile__img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  position: absolute;
+  right: 8em;
+  top: 1rem;
+}
+
 .logout__btn {
   position: absolute;
   right: 2rem;

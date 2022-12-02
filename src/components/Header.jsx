@@ -18,9 +18,16 @@ const Header = () => {
     <header style={{ position: "relative" }}>
       <h1>Rapptr Labs</h1>
       {loggedInUser && (
-        <button className="logout__btn todo__btn" onClick={onLogout}>
-          logout
-        </button>
+        <>
+          <img
+            src={loggedInUser.user_profile_image}
+            alt="profile"
+            className="profile__img"
+          />
+          <button className="logout__btn todo__btn" onClick={onLogout}>
+            logout
+          </button>
+        </>
       )}
     </header>
   );
